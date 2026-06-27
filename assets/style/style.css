@@ -207,3 +207,32 @@ nav .btn {
     /* transform: rotate(-8deg); */
   }
 }
+
+
+/* ============ Features Section ============ */
+
+.features {
+    padding: var(--paddings-in-sections);
+}
+
+.features .heading-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 100px;
+    padding: 0 6%;
+    line-height: 69px;
+}
+.features .heading-content h2{
+    flex-basis: 360px;
+    color: var(--secondary-color);
+}
+.features .heading-content .subheader{
+    flex-basis: 330px;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 163.2%;
+    
+}
+
