@@ -297,7 +297,7 @@ nav .btn {
 .gallery .wrapper {
   display: flex;
   flex-direction: row;
-  /* width: 100vw; */
+  width: 100%;
   flex-wrap: nowrap;
   text-align: center;
   gap: 2rem;
@@ -306,9 +306,10 @@ nav .btn {
 }
 
 .gallery .wrapper img {
-  min-width: 480px;
+  min-width: calc(100% / 2.8);
+  width: calc(100% / 2.8);
+  max-width: 480px;
   height: 415px;
-  width: 480px;
   object-fit: cover;
   display: block;
   border-radius: 15px;
@@ -326,4 +327,9 @@ nav .btn {
   display: block;
   font-size: 2.5rem;
   cursor: pointer;
+  transition: all 0.6 ease;
+}
+
+.gallery i:hover {
+  color: var(--secondary-color);
 }

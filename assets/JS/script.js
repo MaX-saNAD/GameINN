@@ -4,8 +4,8 @@ let nextArrow = document.getElementById('next')
 let imgs = wrapper.getElementsByTagName('img')
 
 let currentIndex = 1 //   transform: translateX(-25%);
-let total = imgs.length -1
-let moveDestence = imgs[0].width
+let total = imgs.length 
+let moveDestence = imgs[0].width  
 
 nextArrow.addEventListener('click', function () {
   currentIndex = (currentIndex + 1) % total
