@@ -333,3 +333,49 @@ nav .btn {
 .gallery i:hover {
   color: var(--secondary-color);
 }
+
+
+/* ============ About Section ============ */
+
+.about {
+  padding: var(--paddings-in-sections) 0;
+  background-color: var(--main-color);
+  position: relative;
+  height: 100dvh;
+}
+
+.about .container {
+  height: 100%;
+}
+
+.about .icons {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.about .flex-wrapper {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.about img {
+  position: absolute;
+  width: clamp(100px, 16vw, 200px);
+}
+
+.about .icons img[alt="bein"]{
+  bottom:  0;
+  right: 0;
+}
+
+.about .text {
+  text-align: center;
+  max-width: 800px;
+}
+
+.about .text h2 {
+  margin-bottom: 1.3rem;
+}
