@@ -334,7 +334,6 @@ nav .btn {
   color: var(--secondary-color);
 }
 
-
 /* ============ About Section ============ */
 
 .about {
@@ -358,7 +357,6 @@ nav .btn {
   height: 100%;
   justify-content: center;
   align-items: center;
-  
 }
 
 .about img {
@@ -366,8 +364,8 @@ nav .btn {
   width: clamp(100px, 16vw, 200px);
 }
 
-.about .icons img[alt="bein"]{
-  bottom:  0;
+.about .icons img[alt='bein'] {
+  bottom: 0;
   right: 0;
 }
 
@@ -379,3 +377,48 @@ nav .btn {
 .about .text h2 {
   margin-bottom: 1.3rem;
 }
+
+
+
+/* ============ About Section ============ */
+
+.tribute {
+  background-image: url(/assets/images/Tribute.webp);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+}
+
+.tribute .text {
+  max-width: 540px;
+}
+
+.tribute .text .tag {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  line-height: 1.7;
+  text-indent: 4px;
+}
+
+.tribute .text h2 {
+  line-height: 1.09;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.tribute .text p {
+  line-height: 1.7;
+  font-weight: 400;
+  padding-left: .3333rem;
+}
+
+.yellow {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+
