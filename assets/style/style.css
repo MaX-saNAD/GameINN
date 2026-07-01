@@ -8,7 +8,7 @@
   --ultra-light-grey: #dae3ea;
   --heading-font: 'Barlow Condensed', sans-serif;
   --body-font: 'DM Sans', sans-serif;
-  --paddings-in-sections: 80px;
+  --paddings-in-sections: 60px;
 }
 
 *,
@@ -86,7 +86,7 @@ nav {
   align-items: center;
 }
 
-.left {
+div.left {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -268,7 +268,7 @@ nav .btn {
   font-family: var(--heading-font);
 }
 
-.features .card p {
+.caption {
   color: var(--ultra-light-grey);
   font-size: 1rem;
   line-height: 1.65;
@@ -302,7 +302,7 @@ nav .btn {
   text-align: center;
   gap: 2rem;
   transform: translateX(-25%);
-  transition: transform 0.6s ease;
+  transition: transform 0.4s ease;
 }
 
 .gallery .wrapper img {
@@ -378,9 +378,7 @@ nav .btn {
   margin-bottom: 1.3rem;
 }
 
-
-
-/* ============ About Section ============ */
+/* ============ Tribute Section ============ */
 
 .tribute {
   background-image: url(/assets/images/Tribute.webp);
@@ -414,7 +412,7 @@ nav .btn {
 .tribute .text p {
   line-height: 1.7;
   font-weight: 400;
-  padding-left: .3333rem;
+  padding-left: 0.3333rem;
 }
 
 .yellow {
@@ -422,3 +420,84 @@ nav .btn {
   text-transform: uppercase;
 }
 
+/* ============ Location Section ============ */
+
+.location {
+  background-color: var(--bg-alt-color);
+  padding: var(--paddings-in-sections) 0;
+}
+
+.location .head-content {
+  margin-bottom: 3rem;
+}
+
+.location .head-content h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.location .head-content p {
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 10%;
+  line-height: 1;
+  width: 100%;
+  color: var(--secondary-color);
+}
+
+.location .head-content p .right {
+  display: block;
+  text-align: end;
+}
+
+.location .cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: clamp(2.5rem, 4vw, 5rem);
+}
+
+.location .cards .card {
+  /* min-width: 500px; */
+  flex-shrink: 1;
+  max-width: 560px;
+}
+
+.location .cards .card img {
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: top center;
+  height: 400px;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.location .cards .card a {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  transition: all 0.4s ease;
+}
+
+.location .cards .card a i {
+  margin-left: 0.25rem;
+  transition: all 0.4s ease;
+}
+
+.location .cards .card a:hover {
+  color: var(--secondary-color);
+}
+
+.location .cards .card a:hover i {
+  margin-left: 0;
+}
+
+.location .cards .card h2,
+.location .cards .card p,
+.location .cards .card a {
+  text-indent: 4px;
+}
