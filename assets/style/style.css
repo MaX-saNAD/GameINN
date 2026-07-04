@@ -109,12 +109,22 @@ li {
 
 a {
   text-decoration: none;
+  transition: all 0.4s ease;
   color: var(--text-color);
 }
 
 .link {
   color: var(--text-color);
   text-transform: capitalize;
+  transition: all 0.4s ease;
+}
+
+.link a:hover {
+  color: var(--secondary-color);
+  transform: translateX(20px);
+}
+.link:hover {
+  transform: scaleX(0.9);
 }
 
 .btn {
@@ -306,9 +316,9 @@ nav .btn {
 }
 
 .gallery .wrapper img {
-  min-width: calc(100% / 2.8);
+  min-width: 480px;
   width: calc(100% / 2.8);
-  max-width: 480px;
+  width: 480px;
   height: 415px;
   object-fit: cover;
   display: block;
@@ -320,6 +330,7 @@ nav .btn {
   gap: 2rem;
   margin-top: 2rem;
   margin-right: 10%;
+  transition: all 0.6 ease;
   justify-content: flex-end;
 }
 
@@ -378,10 +389,14 @@ nav .btn {
   margin-bottom: 1.3rem;
 }
 
+.about .text p {
+  line-height: 1.5;
+}
+
 /* ============ Tribute Section ============ */
 
 .tribute {
-  background-image: url(/assets/images/Tribute.webp);
+  background-image: url(../images/Tribute.webp);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -515,15 +530,17 @@ nav .btn {
 .cta .container {
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-items: center;
   flex-direction: column;
+  height: 100%;
 }
 
 .cta .cta-btn {
   max-width: 475px;
   width: 475px;
   margin: 0 auto;
-  padding: 2rem;
+  padding-top: clamp(1.5rem, 2.5vw, 2rem);
+  padding-bottom: clamp(1.5rem, 2.5vw, 2rem);
   border: none;
   border-radius: 900px;
   font-size: 1.75rem;
@@ -533,5 +550,39 @@ nav .btn {
   text-transform: capitalize;
   background-color: var(--secondary-color);
   color: var(--main-color);
-  box-shadow: 7px 12px 0 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 7px 12px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.cta .cta-badge {
+  width: 620px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.cta img {
+  width: 100%;
+}
+
+/* ============ CTA Section ============ */
+
+footer {
+  background-color: var(--main-color);
+  padding: var(--paddings-in-sections) 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+}
+
+footer ul.links {
+  gap: 1rem;
+}
+
+footer .label {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 1.25rem;
 }
