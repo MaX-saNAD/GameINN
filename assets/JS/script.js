@@ -5,10 +5,7 @@ let imgs = wrapper.getElementsByTagName('img')
 
 let currentIndex = 1 //   transform: translateX(-25%);
 let total = imgs.length
-if (window.innerWidth <= 890) {
-  total = imgs.length +1
-}
-let moveDestence = imgs[0].width
+let moveDestence = imgs[0].width + 16
 
 nextArrow.addEventListener('click', function () {
   currentIndex = (currentIndex + 1) % total

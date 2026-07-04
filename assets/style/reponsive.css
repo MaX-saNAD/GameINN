@@ -1,0 +1,37 @@
+/* ============ Responsive ============ */
+
+@media screen and (max-width: 1024px) {
+  .features .caption {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  .features .heading-content .subheader {
+    font-size: 1rem;
+  }
+  .location p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .location .cards {
+    flex-direction: column;
+    text-align: center;
+  }
+  .features .cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+  }
+  .features .cards p {
+    font-size: 01.2rem;
+    line-height: 1.4;
+  }
+
+ 
+}
+
+@media screen and (max-width: 480px) {
+}

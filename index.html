@@ -25,6 +25,7 @@
 
     <!-- Link the stylesheet -->
     <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="assets/style/reponsive.css" />
   </head>
   <body>
     <!-- Hero Section -->
@@ -49,7 +50,9 @@
               </ul>
             </div>
             <div class="right">
-              <button class="btn secondary-btn">Book Now</button>
+              <button class="btn secondary-btn" id="secondary-btn">
+                Book Now
+              </button>
             </div>
           </div>
         </div>
@@ -64,8 +67,10 @@
           PS5 Rooms · Sports Screenings · Café Corner · Live Sports TV
         </p>
         <div class="CTAs">
-          <button class="btn primary-btn">Book Now</button>
-          <button class="btn secondary-btn">Explore Rooms</button>
+          <button class="btn primary-btn" id="primary-btn">Book Now</button>
+          <button class="btn secondary-btn" id="secondary-btn">
+            Explore Rooms
+          </button>
         </div>
       </div>
     </section>
@@ -367,41 +372,46 @@
           <img src="assets/images/GameINN-badge.svg" alt="GameINN-badge" />
         </div>
 
-        <button class="btn cta-btn">Your next night starts here.</button>
+        <button class="btn cta-btn" id="cta-button">
+          Your next night starts here.
+        </button>
       </div>
     </section>
 
     <!-- Footer -->
     <footer>
       <div class="container">
-        <p class="label">© 2026 GameINN</p>
-        <img
-          src="assets/images/logo.svg"
-          alt="GameINN logo"
-          width="65"
-          height="70"
-        />
+        <a href="https://www.facebook.com/gameinnplaystation" target="_blank"
+          ><img
+            src="assets/images/logo.svg"
+            alt="GameINN logo"
+            width="65"
+            height="70"
+        /></a>
+        <div class="wrapper">
+          <p class="label">© 2026 GameINN</p>
 
-        <ul class="links">
-          <li class="link">
-            <a href="#hero">Home</a>
-          </li>
-          <li class="link">
-            <a href="#features">Features</a>
-          </li>
-          <li class="link">
-            <a href="#gallery">Gallery</a>
-          </li>
-          <li class="link">
-            <a href="#about">About</a>
-          </li>
-          <li class="link">
-            <a href="#location">Location</a>
-          </li>
-        </ul>
+          <ul class="links">
+            <li class="link">
+              <a href="#hero">Home</a>
+            </li>
+            <li class="link">
+              <a href="#features">Features</a>
+            </li>
+            <li class="link">
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li class="link">
+              <a href="#about">About</a>
+            </li>
+            <li class="link">
+              <a href="#location">Location</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
 
-    <script src="assets/JS/script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
