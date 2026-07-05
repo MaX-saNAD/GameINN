@@ -7,6 +7,7 @@
       name="description"
       content="GameINN Station in Port Said, Egypt — private PS5 gaming rooms, live sports screenings, and a café lounge. Book your room online."
     />
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
     <title>GameINN</title>
 
     <!-- Google fonts -->
@@ -25,7 +26,7 @@
 
     <!-- Link the stylesheet -->
     <link rel="stylesheet" href="assets/style/style.css" />
-    <link rel="stylesheet" href="assets/style/reponsive.css" />
+    <link rel="stylesheet" href="assets/style/responsive.css" />
   </head>
   <body>
     <!-- Hero Section -->
@@ -33,6 +34,9 @@
       <nav>
         <div class="container">
           <div class="flex-wrapper">
+            <div class="menu-icon" id="menu-icon">
+              <span></span><span></span><span></span>
+            </div>
             <div class="left">
               <div class="brand">
                 <img
@@ -42,15 +46,16 @@
                   height="70"
                 />
               </div>
-              <ul class="links">
-                <li class="link"><a href="#features">features</a></li>
-                <li class="link"><a href="#gallery">gallery</a></li>
-                <li class="link"><a href="#about">about</a></li>
-                <li class="link"><a href="#location">location</a></li>
-              </ul>
             </div>
+            <ul class="links">
+              <li class="link"><a href="#features">features</a></li>
+              <li class="link"><a href="#gallery">gallery</a></li>
+              <li class="link"><a href="#about">about</a></li>
+              <li class="link"><a href="#location">location</a></li>
+            </ul>
+
             <div class="right">
-              <button class="btn secondary-btn" id="secondary-btn">
+              <button class="btn secondary-btn book" >
                 Book Now
               </button>
             </div>
@@ -67,8 +72,8 @@
           PS5 Rooms · Sports Screenings · Café Corner · Live Sports TV
         </p>
         <div class="CTAs">
-          <button class="btn primary-btn" id="primary-btn">Book Now</button>
-          <button class="btn secondary-btn" id="secondary-btn">
+          <button class="btn primary-btn book" >Book Now</button>
+          <button class="btn secondary-btn" id="explore">
             Explore Rooms
           </button>
         </div>
@@ -79,7 +84,7 @@
     <section class="features" id="features">
       <div class="container">
         <div class="heading-content">
-          <h2>Pick your game Pick your night</h2>
+          <h2>Pick your game <br>Pick your night</h2>
           <p class="subheader">
             The ultimate destination for gamers, sports fans, and friends
             looking for a great night out.

@@ -19,7 +19,8 @@
   box-sizing: border-box;
 }
 html {
-  transition: all 0.6s ease;
+  transition: all 1s ease;
+  scroll-behavior: smooth;
 }
 body {
   color: var(--text-color);
@@ -40,7 +41,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.125rem, 4vw, 2.25rem);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-family: var(--body-font);
   font-weight: 300;
 }
@@ -91,6 +92,7 @@ div.left {
   flex-direction: row;
   align-items: center;
   gap: 2.5rem;
+  position: relative;
 }
 
 ul {
@@ -127,6 +129,39 @@ a {
   transform: scaleX(0.9);
 }
 
+.opend {
+  transform: translateX(0px) !important;
+}
+
+.menu-icon {
+  display: none;
+  width: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.menu-icon span {
+  display: block;
+  height: 5px;
+  background-color: var(--text-color);
+  margin-bottom: 5px;
+  border-radius: 15px;
+  transition: all 0.6s ease;
+}
+.checked {
+  transform: translateY(10px);
+}
+.checked span:nth-child(2) {
+  transform: translateX(-1000px);
+  opacity: 0;
+  visibility: hidden;
+}
+.checked span:nth-child(1) {
+  transform: rotate(-45deg);
+}
+.checked span:nth-child(3) {
+  transform: rotate(45deg) translate(-12px, -12px);
+}
+
 .btn {
   background-color: transparent;
   border: 1px solid var(--text-color);
@@ -144,6 +179,7 @@ a {
   color: var(--main-color);
   font-size: 1.2rem;
   font-weight: 700;
+    padding: clamp(0.9rem, 1.2vw, 1.1rem) clamp(2.5rem, 2.6vw, 3.2rem);
   box-shadow: 0 8px 20px rgba(254, 218, 20, 0.25);
   transition: all 0.6s ease;
 }
@@ -322,7 +358,7 @@ nav .btn {
   text-align: center;
   gap: 2rem;
   transform: translateX(-25%);
-  transition: transform 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .gallery .wrapper img {
@@ -453,6 +489,12 @@ nav .btn {
 .location .head-content h2 {
   text-align: center;
   margin-bottom: 2rem;
+}
+.location h3 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
 }
 
 .location .head-content p {
@@ -592,7 +634,7 @@ footer .container {
   flex-flow: column;
 }
 
-footer a  {
+footer a {
   align-self: center;
 }
 footer ul.links {
