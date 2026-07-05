@@ -122,4 +122,7 @@
   .features h2 {
     font-size: 2rem;
   }
+  .gallery .wrapper img {
+    width: 100% !important;
+  }
 }
