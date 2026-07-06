@@ -37,5 +37,5 @@ book.forEach((btn) => {
 })
 
 explore.addEventListener('click', () => {
-  document.getElementById('about').scrollIntoView({ behavior: 'smooth' })
+  document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' })
 })
