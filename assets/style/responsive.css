@@ -93,6 +93,9 @@
     flex-direction: column-reverse;
     gap: 1rem;
   }
+  footer .label {
+    font-size: 1.25rem !important;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -108,7 +111,7 @@
     max-width: 200px;
   }
   nav .links {
-    gap:3rem;
+    gap: 3rem;
   }
   .features .heading-content {
     padding: 0 6%;
@@ -129,6 +132,4 @@
     width: 100% !important;
     min-width: 90% !important;
   }
-
-  
 }
