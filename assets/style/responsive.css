@@ -107,6 +107,9 @@
   .hero-content .CTAs .btn {
     max-width: 200px;
   }
+  nav .links {
+    gap:3rem;
+  }
   .features .heading-content {
     padding: 0 6%;
   }
@@ -126,4 +129,6 @@
     width: 100% !important;
     min-width: 90% !important;
   }
+
+  
 }
