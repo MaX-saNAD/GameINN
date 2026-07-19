@@ -72,6 +72,11 @@
     height: 320px;
   }
 
+  .gallery .arrows {
+    display: none;
+    opacity: 0;
+  }
+
   .tribute {
     background-position: 80% 0;
     background-attachment: local;
@@ -130,10 +135,6 @@
   }
   .features h2 {
     font-size: 2rem;
-  }
-  .gallery .wrapper img {
-    width: 100% !important;
-    min-width: 90% !important;
   }
 
   .location .card img {
