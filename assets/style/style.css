@@ -8,7 +8,7 @@
   --ultra-light-grey: #dae3ea;
   --heading-font: 'Barlow Condensed', sans-serif;
   --body-font: 'DM Sans', sans-serif;
-  --paddings-in-sections: 60px;
+  --paddings-in-sections: 80px;
 }
 
 *,
@@ -66,7 +66,7 @@ h4 {
   align-items: center;
   background-image: url(../images/Hero.webp);
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -179,7 +179,7 @@ a {
   color: var(--main-color);
   font-size: 1.2rem;
   font-weight: 700;
-    padding: clamp(0.9rem, 1.2vw, 1.1rem) clamp(2.5rem, 2.6vw, 3.2rem);
+  padding: clamp(0.9rem, 1.2vw, 1.1rem) clamp(2.5rem, 2.6vw, 3.2rem);
   box-shadow: 0 8px 20px rgba(254, 218, 20, 0.25);
   transition: all 0.6s ease;
 }
@@ -346,28 +346,30 @@ nav .btn {
   margin-bottom: 90px;
 }
 
-.gallery .carousel {
+.gallery .embla {
   overflow: hidden;
 }
 
-.gallery .wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: nowrap;
-  text-align: center;
-  gap: 2rem;
-  transform: translateX(-25%);
-  transition: all 0.4s ease;
+.gallery .embla__viewport {
+  overflow: hidden;
 }
 
-.gallery .wrapper img {
-  width: 480px;
-  min-width: 480px;
+.gallery .embla__container {
+  display: flex;
+  gap: 2rem;
+  touch-action: pan-y pinch-zoom;
+}
+
+.gallery .embla__slide {
+  flex: 0 0 480px;
+}
+
+.gallery .embla__slide img {
+  width: 100%;
   height: 415px;
   object-fit: cover;
-  display: block;
   border-radius: 15px;
+  display: block;
 }
 
 .gallery .arrows {
@@ -375,13 +377,21 @@ nav .btn {
   gap: 2rem;
   margin-top: 2rem;
   margin-right: 10%;
-  /* transition: all 0.6s ease; */
+  transition: all 0.6s ease;
   justify-content: flex-end;
+}
+
+.gallery .arrows button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .gallery i {
   display: block;
   font-size: 2.5rem;
+  color: var(--text-color);
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -441,7 +451,7 @@ nav .btn {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   height: 100dvh;
   display: flex;
   align-items: center;
@@ -449,14 +459,18 @@ nav .btn {
 
 .tribute .text {
   max-width: 540px;
+  text-align: left;
 }
 
 .tribute .text .tag {
+  margin-bottom: 1.5rem;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--secondary-color);
   line-height: 1.7;
+  letter-spacing: 6px;
   text-indent: 4px;
+  text-transform: uppercase;
 }
 
 .tribute .text h2 {
@@ -468,12 +482,15 @@ nav .btn {
 .tribute .text p {
   line-height: 1.7;
   font-weight: 400;
+  font-size: 1.3rem;
   padding-left: 0.3333rem;
 }
 
 .yellow {
   color: var(--secondary-color);
   text-transform: uppercase;
+  /* font-size: 1.5rem; */
+  font-weight: 7  00;
 }
 
 /*  ================ Location Section  ================ */
@@ -490,6 +507,7 @@ nav .btn {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .location h3 {
   font-family: var(--heading-font);
   font-weight: 500;
@@ -516,22 +534,19 @@ nav .btn {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   gap: clamp(2.5rem, 1vw, 5rem);
 }
 
 .location .cards .card {
-  /* min-width: 500px; */
-  min-width: 300px;
-
-  /* flex-shrink: 1; */
-  max-width: 560px;
+  min-width: 320px;
+  width: 46%;
+  max-width: 660px;
 }
 
 .location .cards .card img {
   object-fit: cover;
-  /* object-position: -40px 20px; */
   height: 400px;
   width: 100%;
   margin-bottom: 0.75rem;
@@ -542,8 +557,6 @@ nav .btn {
   font-size: 0.9rem;
   width: 100%;
   margin: 0 auto;
-  /* display: flex;
-  align-items: center; */
   margin-top: 0.5rem;
   transition: all 0.4s ease;
 }
@@ -601,6 +614,8 @@ nav .btn {
   background-color: var(--secondary-color);
   color: var(--main-color);
   box-shadow: 7px 12px 4px 0 rgba(0, 0, 0, 0.3);
+  word-break: keep-all;
+  white-space: nowrap;
 }
 
 .cta .cta-badge {

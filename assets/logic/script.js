@@ -1,44 +1,75 @@
-const wrapper = document.getElementById('wrapper')
-const prevArrow = document.getElementById('prev')
-const nextArrow = document.getElementById('next')
-const imgs = wrapper.getElementsByTagName('img')
 const menu = document.getElementById('menu-icon')
 const navLinks = document.querySelector('nav .links')
-const book = document.querySelectorAll('.book')
+
+const bookButtons = document.querySelectorAll('.book')
 const explore = document.getElementById('explore')
-const ctaBtn = document.getElementById("cta-button")
+const ctaBtn = document.getElementById('cta-button')
 
-const bookBtns = [...book, ctaBtn]
-let currentIndex = 1 //   transform: translateX(-25%);
-let total = imgs.length
-const gap = 16;
-let moveDistance = imgs[0].width + gap
+const allButtons = ctaBtn ? [...bookButtons, ctaBtn] : [...bookButtons]
 
-nextArrow.addEventListener('click', function () {
-  currentIndex = (currentIndex + 1) % total
-  wrapper.style.transform = `translateX(-${moveDistance * currentIndex}px)`
+const facebookURL = 'https://www.facebook.com/gameinnplaystation'
+
+// ================= Slider =================
+
+const emblaNode = document.querySelector('.embla__viewport')
+const prevButton = document.querySelector('.embla__prev')
+const nextButton = document.querySelector('.embla__next')
+
+const embla = EmblaCarousel(emblaNode, {
+  loop: true,
+  align: 'center',
+  duration: 25,
 })
 
-prevArrow.addEventListener('click', function () {
-  currentIndex = (currentIndex - 1 + total) % total
-  wrapper.style.transform = `translateX(-${moveDistance * currentIndex}px)`
+prevButton.addEventListener('click', () => embla.scrollPrev())
+nextButton.addEventListener('click', () => embla.scrollNext())
+
+// ================= GSAP =================
+
+gsap.registerPlugin(ScrollTrigger)
+
+const defaults = {
+  duration: 0.8,
+  ease: 'power3.out',
+}
+
+function reveal(selector, options = {}) {
+  gsap.utils.toArray(selector).forEach((element) => {
+    gsap.from(element, {
+      ...defaults,
+      ...options,
+
+      scrollTrigger: {
+        trigger: element,
+        start: 'top 85%',
+        once: true,
+      },
+    })
+  })
+}
+
+reveal('.reveal', {
+  opacity: 0,
+  y: 60,
 })
 
-menu.addEventListener('click', () => {
+// ================= Mobile Menu =================
+
+menu?.addEventListener('click', () => {
   menu.classList.toggle('checked')
   navLinks.classList.toggle('opend')
 })
 
-bookBtns.forEach((btn) => {
+// ================= Facebook Buttons =================
+
+allButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
-    window.open(
-      'https://www.facebook.com/gameinnplaystation',
-      '_blank',
-      'noopener,noreferrer',
-    )
+    window.open(facebookURL, '_blank', 'noopener,noreferrer')
   })
 })
 
-explore.addEventListener('click', () => {
-  document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' })
+// ================= Explore Button =================
+
+explore?.addEventListener('click', () => {
+  document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })
 })

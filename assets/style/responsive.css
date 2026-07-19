@@ -64,9 +64,12 @@
     gap: 4rem;
   }
 
-  .gallery .wrapper img {
-    min-width: calc(100% / 2) !important;
-    width: calc(100% / 2.8) !important;
+  .gallery .embla__slide {
+    flex: 0 0 85%;
+  }
+
+  .gallery .embla__slide img {
+    height: 320px;
   }
 
   .tribute {
@@ -131,5 +134,12 @@
   .gallery .wrapper img {
     width: 100% !important;
     min-width: 90% !important;
+  }
+
+  .location .card img {
+    height: 200px !important;
+  }
+  .location .head-content p {
+    line-height: 1.5;
   }
 }
